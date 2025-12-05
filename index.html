@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeSer Jardinería - Expertos en Espacios Verdes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <header class="header-section">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <div class="logo-container">
+                        <img src="imaguenes/Logo.png" alt="VerdeSer Logo" class="logo-imagen">
+                        <span class="logo-text">VerdeSer</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#quienes-somos">Quiénes Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="banner-principal">
+        <div id="canvas-arbol"></div>
+        <div class="banner-overlay">
+            <div class="container">
+                <div class="banner-content">
+                    <h1 class="banner-title animate-fade-in">Transformamos tu espacio en un paraíso verde</h1>
+                    <p class="banner-subtitle animate-fade-in-delay">Diseño, mantenimiento y cuidado profesional de jardines</p>
+                    <button class="btn btn-principal animate-fade-in-delay-2">Contactanos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quienes-somos" class="seccion-quienes-somos">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="imagen-decorativa">
+                        <div class="decoracion-circulo"></div>
+                        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&h=700&fit=crop" alt="Jardín VerdeSer" class="img-fluid rounded-custom">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="etiqueta-seccion">Nuestra Historia</span>
+                    <h2 class="titulo-seccion">Quiénes Somos</h2>
+                    <div class="linea-decorativa"></div>
+                    <p class="texto-seccion">
+                        <strong>VerdeSer Jardinería</strong> nace de la pasión por la naturaleza y el deseo de crear espacios verdes que mejoren la calidad de vida de las personas. Con más de 10 años de experiencia en el sector, nuestro equipo de profesionales se especializa en el diseño, creación y mantenimiento de jardines únicos.
+                    </p>
+                    <p class="texto-seccion">
+                        Creemos que cada espacio verde es una oportunidad para conectar con la naturaleza. Trabajamos con técnicas sostenibles, respetando el medio ambiente y seleccionando especies autóctonas que se adapten perfectamente a cada clima y suelo.
+                    </p>
+                    <div class="stats-container mt-4">
+                        <div class="stat-item">
+                            <h3 class="stat-numero">10</h3>
+                            <p class="stat-texto">Años de experiencia</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-numero">500</h3>
+                            <p class="stat-texto">Proyectos realizados</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-numero">99</h3>
+                            <p class="stat-texto">Clientes satisfechos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-nota-principal">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="etiqueta-seccion">Creatividad Natural</span>
+                    <h2 class="titulo-seccion">Diseñamos Jardines con Vida</h2>
+                    <div class="linea-decorativa"></div>
+                    <p class="texto-destacado">Cada proyecto es único, como cada flor en un jardín.</p>
+                    <p class="texto-seccion">
+                        En VerdeSer, entendemos que tu jardín es una extensión de tu hogar. Por eso, diseñamos espacios verdes personalizados que reflejan tu estilo y necesidades. Desde pequeños balcones hasta grandes parques, transformamos cada rincón en un oasis natural.
+                    </p>
+                    <p class="texto-seccion">
+                        Utilizamos plantas seleccionadas cuidadosamente, sistemas de riego eficientes y técnicas de jardinería sostenible. Nuestro objetivo es crear jardines que no solo sean hermosos, sino también fáciles de mantener y amigables con el medio ambiente.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="canvas-container-flor">
+                        <div id="canvas-flor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="seccion-servicios">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <span class="etiqueta-seccion">Lo que hacemos</span>
+                    <h2 class="titulo-seccion text-center">Nuestros Servicios</h2>
+                    <div class="linea-decorativa mx-auto"></div>
+                    <p class="subtitulo-seccion">Soluciones integrales para tu espacio verde</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">
+                            <img src="imaguenes/podadoras.png" alt="Poda">
+                        </div>
+                        <h4>Poda Profesional</h4>
+                        <p>Mantenimiento y poda especializada de árboles y arbustos para un crecimiento saludable y estético.</p>
+                        <a href="#" class="enlace-servicio">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">
+                            <img src="imaguenes/bosquejo.png" alt="Diseño">
+                        </div>
+                        <h4>Diseño de Jardines</h4>
+                        <p>Proyectos personalizados que transforman tu espacio en un lugar único y especial.</p>
+                        <a href="#" class="enlace-servicio">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">
+                            <img src="imaguenes/agricultura.png" alt="Mantenimiento">
+                        </div>
+                        <h4>Mantenimiento</h4>
+                        <p>Cuidado regular de tu jardín para mantenerlo siempre verde, saludable y hermoso.</p>
+                        <a href="#" class="enlace-servicio">Ver más</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="tarjeta-servicio">
+                        <div class="icono-servicio">
+                            <img src="imaguenes/campo.png" alt="Paisajismo">
+                        </div>
+                        <h4>Paisajismo</h4>
+                        <p>Creación de paisajes armoniosos con especies autóctonas y diseño sostenible.</p>
+                        <a href="#" class="enlace-servicio">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipo" class="seccion-equipo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <span class="etiqueta-seccion">Conoce al equipo</span>
+                    <h2 class="titulo-seccion">Nuestro Equipo</h2>
+                    <div class="linea-decorativa mx-auto"></div>
+                    <p class="subtitulo-seccion">Profesionales apasionados por la jardinería</p>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-equipo">
+                        <div class="foto-equipo">
+                            <img src="imaguenes/Maria.jpg" alt="María García">
+                            <div class="overlay-equipo">
+                                <p>"La naturaleza es nuestra mejor maestra"</p>
+                            </div>
+                        </div>
+                        <div class="info-equipo">
+                            <h4>María García</h4>
+                            <p class="rol-equipo">Ingeniera Agrónoma</p>
+                            <p class="descripcion-equipo">Especialista en diseño de jardines sustentables y selección de especies nativas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-equipo">
+                        <div class="foto-equipo">
+                            <img src="imaguenes/Juan.jpg" alt="Juan López">
+                            <div class="overlay-equipo">
+                                <p>"Cada jardín cuenta una historia"</p>
+                            </div>
+                        </div>
+                        <div class="info-equipo">
+                            <h4>Juan López</h4>
+                            <p class="rol-equipo">Paisajista</p>
+                            <p class="descripcion-equipo">Experto en transformación de espacios y mantenimiento de áreas verdes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="tarjeta-equipo">
+                        <div class="foto-equipo">
+                            <img src="imaguenes/Jeronimo.jpg" alt="Jeronimo de Ezcurra">
+                            <div class="overlay-equipo">
+                                <p>"El cuidado es amor hecho visible"</p>
+                            </div>
+                        </div>
+                        <div class="info-equipo">
+                            <h4>Jeronimo de Ezcurra</h4>
+                            <p class="rol-equipo">Técnica en Jardinería</p>
+                            <p class="descripcion-equipo">Especializado en poda ornamental y cuidado de plantas de interior y exterior.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-seccion">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="logo-footer">
+                        <img src="imaguenes/Logo.png" alt="VerdeSer Logo" class="logo-imagen-footer">
+                        <span class="logo-text-footer">VerdeSer</span>
+                    </div>
+                    <p class="texto-footer mt-3">Transformando espacios, cultivando vida.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="info-cursada">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <p class="dato-cursada"><strong>Carrera:</strong> Diseño Multimedial</p>
+                                <p class="dato-cursada"><strong>Materia:</strong> Diseño y Programación WEB I</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dato-cursada"><strong>Turno:</strong> Mañana | <strong>Comisión:</strong> A</p>
+                                <p class="dato-cursada"><strong>Docente:</strong> Omar Toyos</p>
+                            </div>
+                        </div>
+                        <p class="dato-cursada text-center mt-3"><strong>Cursada:</strong> Diciembre 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="arbol.js"></script>
+    <script src="flor.js"></script>
+    
+</body>
+</html>
